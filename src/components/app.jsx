@@ -13,9 +13,7 @@ class App extends Component {
 
     return (
       <div>
-        <div className="flat-list">
-          <FlatList flats = {flats} />
-        </div>
+        <FlatList flats = {flats} />
         <div className="map-container">
           <SimpleMap />
         </div>
