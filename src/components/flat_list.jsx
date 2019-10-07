@@ -3,15 +3,14 @@ import Flat from './flat.jsx';
 
 const FlatList = (props) => {
   const renderList = () => {
-    return props.flats.map(flat => {
-      return (<Flat
-        name={flat.name}
-        imageUrl={flat.imageUrl}
-        price={flat.price}
-        priceCurrency={flat.priceCurrency}
-        lat={flat.lat}
-        lng= {flat.lng}
-        key={flat.name}
+    return props.flats.map((flat, index) => {
+      return (
+        <Flat
+          flat={flat}
+          key={flat.lat}
+          selected={flat.name === props.selectedFlat.name}
+          index={index}
+          selectFlat={props.selectFlat}
         />
       );
     });
